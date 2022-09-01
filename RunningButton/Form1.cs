@@ -20,9 +20,9 @@ namespace RunningButton
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.X >= button1.Location.X && e.X <= button1.Location.X + button1.Width || e.Y >= button1.Location.Y && e.Y <= button1.Location.Y + button1.Width)
+            if (e.X >= button1.Location.X && e.X <= button1.Location.X + button1.Width || e.Y >= button1.Location.Y && e.Y <= button1.Location.Y + button1.Height)
             {
-                button1.Location = new Point(random.Next(0, this.Size.Width), random.Next(0, this.Size.Height));
+                button1.Location = new Point(random.Next(0, this.Size.Width - button1.Width), random.Next(0, this.Size.Height - button1.Height));
             }
         }
     }
